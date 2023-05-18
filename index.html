@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Autoconfiable</title>
+    <title>Autoconfiable S.A.S</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" srcset="" width="100px" class="p-2"> Auto<span>confiable</span></a>
+	      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" srcset="" width="100px" class="p-2"> Auto<span>confiable S.A.S</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -32,8 +32,8 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
 	          <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-	          <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-	          <li class="nav-item"><a href="#clientes" class="nav-link">Aleados</a></li>
+	          <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
+	          <li class="nav-item"><a href="#clientes" class="nav-link">Aliados</a></li>
 	          <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
 	        </ul>
 	      </div>
@@ -41,7 +41,7 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/4.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/pic1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
@@ -61,52 +61,75 @@
     	<div class="container">
     		<div class="row no-gutters">
     			<div class="col-md-12	featured-top">
-    				<div class="row no-gutters">
-	  					<div class="col-md-4 d-flex align-items-center">
-	  						<form action="#" class="request-form ftco-animate bg-primary" id="rentar">
-		          		<h2 class="text-center">SOLICITA TU SERVICIO</h2>
+    				<div class="row no-gutters" >
+	  					<div class="col-md-4 d-flex align-items-center" >
+                <!--INICIA FORMULARIO DE SOLICITUD DE SERVICIO-->
+	  						<form action="#" class="request-form ftco-animate bg-primary" id="servicios" >
+		          		<h2 class="text-center">Solicita tu servicio</h2>
 			    				<div class="form-group">
 			    					<label for="" class="label">Dirección</label>
-			    					<input type="text" class="form-control" placeholder="Dirección de recogida">
+			    					<input type="text" class="form-control" name="direccionRecogida" placeholder="Dirección de recogida" required>
 			    				</div>
 			    				<div class="form-group">
 			    					<label for="" class="label">Dirección de destino</label>
-			    					<input type="text" class="form-control" placeholder="Dirección de destino">
+			    					<input type="text" class="form-control" name="direccionDestino" placeholder="Dirección de destino" required>
 			    				</div>
 			    				<div class="d-flex">
 			    					<div class="form-group mr-4">
 			                <label for="" class="label">Fecha</label>
-			                <input type="date" class="form-control" placeholder="Fecha">
+			                <input type="date" class="form-control" name="fecha" placeholder="Fecha" required> 
 			              </div>
+                 
 			              <div class="form-group ml-2">
 			                <label for="" class="label">Teléfono</label>
-			                <input type="number" class="form-control"  placeholder="Teléfono">
+			                <input type="number" class="form-control" name="telefono"  placeholder="Teléfono" required>
 			              </div>
+		              </div>
+                  <div class="form-group">
+		                <label for="" class="label">Nombre completo</label>
+		                <input type="text" class="form-control" name="nombre" placeholder="Nombre completo" style="text-transform: capitalize;" required>
 		              </div>
 		              <div class="form-group">
 		                <label for="" class="label">Hora de recogida</label>
-		                <input type="text" class="form-control" id="time_pick" placeholder="Seleccionar hora">
+		                <input type="text" class="form-control" id="time_pick" name="hora" placeholder="Seleccionar hora" required>
 		              </div>
+                   <div class="form-group">
+                    <label class="label">Seleccione el servicio a solicitar</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="servicio" required>
+                       <option value="">Seleccionar</option>
+                      <option value="Empresarial">Empresarial</option>
+                      <option value="Turismo">Turismo</option>
+                      <option value="Escolar">Escolar</option>
+                      <option value="Particular">Particular</option>
+                    </select>
+                  </div>
 			            <div class="form-group">
-			              <input type="submit" value="Solicitar servicio" class="btn btn-success py-3 px-4">
+			              <input type="submit" value="Solicitar servicio" name="enviar" id="enviar" class="btn btn-success py-3 px-4">
 			            </div>
 			    			</form>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script type="text/javascript">
+                emailjs.init('tI3ZdsNlFicK9UKRT')
+                </script>
+                 <!--FINALIZA FORMULARIO DE SOLICITUD DE SERVICIO-->
 	  					</div>
 	  					<div class="col-md-8 d-flex align-items-center">
 	  						<div class="services-wrap rounded-right w-100">
-	  							<h3 class="heading-section mb-4">Las mejores opciones de porque elegirnos</h3>
+                  
+	  							<h3 class="heading-section mb-4 text-center">Las mejores opciones para elegirnos</h3>
+                  <img src="images/pic1.jpg" alt="" srcset="" width="100%">
 	  							<div class="row d-flex mb-4">
-					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate" >
 					            <div class="services w-100 text-center">
-				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route" style="color: blue;"></span></div>
 				              	<div class="text w-100">
-					                <h3 class="heading mb-2">Choose Your Pickup Location</h3>
+					                <h3 class="heading mb-2">Puntualidad</h3>
 				                </div>
 					            </div>      
 					          </div>
 					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
 					            <div class="services w-100 text-center">
-				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake" style="color: blue;"></span></div>
 				              	<div class="text w-100">
 					                <h3 class="heading mb-2">Confiabilidad</h3>
 					              </div>
@@ -114,15 +137,14 @@
 					          </div>
 					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
 					            <div class="services w-100 text-center">
-				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent" style="color: blue;"></span></div>
 				              	<div class="text w-100">
 					                <h3 class="heading mb-2">Disponibilidad</h3>
 					              </div>
 					            </div>      
 					          </div>
 					        </div>
-					        <p><a href="#" class="btn btn-primary py-3 px-4">Reserve su servicio con tiempo</a></p>
-	  						</div>
+                </div>
 	  					</div>
 	  				</div>
 				</div>
@@ -203,17 +225,17 @@
     	</div>
     </section>-->
 
-    <section class="ftco-section ftco-about" id="nosotros">
+    <section class="ftco-section ftco-about" id="nosotros" style="background-image: url(images/pic6.png);  background-attachment: fixed; background-size: cover;">
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/2.jpg);">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/pic6.png);">
 					</div>
 					<div class="col-md-6 wrap-about ftco-animate">
 	          <div class="heading-section heading-section-white pl-md-5">
 	          	<span class="subheading">Nosotros</span>
 	            <h2 class="mb-4">¿Quiénes somos?</h2>
 
-	            <p>Autoconfiable es un empresa dedica al  transporte individual con su enfoque para pacientes con movilidad reducida,  con un equipo de trabajo especializado en el manejo y cuidado de los usuarios. Brindando un servicio las 24 horas del día en todo el valle de aburra</p>
+	            <p>Autoconfiable es un empresa dedica al  transporte especial con su enfoque para pacientes con movilidad reducida,  con un equipo de trabajo especializado en el manejo y cuidado de los usuarios. Brindando un servicio las 24 horas del día en todo el valle de aburra</p>
 	            
 	          </div>
 					</div>
@@ -221,18 +243,18 @@
 			</div>
 		</section>
 
-		<section class="ftco-section" id="servicios">
+		<section class="ftco-section" id="services">
 			<div class="container">
 				<div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
+          <div class="col-md-7 text-center heading-section ftco-animate" >
           	<span class="subheading">Servicios</span>
             <h2 class="mb-3">Nuestros servicios</h2>
           </div>
         </div>
 				<div class="row">
 					<div class="col-md-3">
-						<div class="services services-2 w-100 text-center">
-            	<div class="icon d-flex align-items-center justify-content-center"><i class="fa fa-light fa-building" style="color:#ffffff;font-size: 30px;"></i></div>
+						<div class="services services-2 w-100 text-center" >
+            	<div class="icon d-flex align-items-center justify-content-center" style="background-color: blue;"><i class="fa fa-light fa-building" style="color:#ffffff;font-size: 30px;"></i></div>
             	<div class="text w-100">
                 <h3 class="heading mb-2">Empresarial</h3>
                 <p>El servicio de vehículo empresarial proporciona transporte a los empleados y/o clientes de una empresa con vehículos de propiedad o arrendados por la misma.</p>
@@ -241,7 +263,7 @@
 					</div>
 					<div class="col-md-3">
 						<div class="services services-2 w-100 text-center">
-            	<div class="icon d-flex align-items-center justify-content-center"><i class="fa fa-light fa-plane" style="color:#ffffff;font-size: 30px;"></i></div>
+            	<div class="icon d-flex align-items-center justify-content-center" style="background-color: blue;"><i class="fa fa-light fa-plane" style="color:#ffffff;font-size: 30px;"></i></div>
             	<div class="text w-100">
                 <h3 class="heading mb-2">Turismo</h3>
                 <p>
@@ -251,16 +273,16 @@
 					</div>
 					<div class="col-md-3">
 						<div class="services services-2 w-100 text-center">
-            	<div class="icon d-flex align-items-center justify-content-center"><i class="fa fa-light fa-bus" style="color:#ffffff;font-size: 30px;"></i></div>
+            	<div class="icon d-flex align-items-center justify-content-center" style="background-color: blue;"><i class="fa fa-light fa-bus" style="color:#ffffff;font-size: 30px;"></i></div>
             	<div class="text w-100">
                 <h3 class="heading mb-2">Escolar</h3>
-                <p>El servicio de vehículo escolar proporciona transporte a estudiantes desde su hogar hasta la escuela y viceversa.</p>
+                <p>El servicio de vehículo escolar proporciona transporte a estudiantes desde su hogar hasta la institución y viceversa.</p>
               </div>
             </div>
 					</div>
 					<div class="col-md-3">
 						<div class="services services-2 w-100 text-center">
-            	<div class="icon d-flex align-items-center justify-content-center"><i class="fa fa-light fa-car" style="color:#ffffff;font-size: 30px;"></i></div>
+            	<div class="icon d-flex align-items-center justify-content-center" style="background-color: blue;"><i class="fa fa-light fa-car" style="color:#ffffff;font-size: 30px;"></i></div>
             	<div class="text w-100">
                 <h3 class="heading mb-2">Particular</h3>
                 <p>El servicio de vehículo particular se refiere al uso de un vehículo de propiedad personal para transporte individual o compartido.</p>
@@ -271,19 +293,17 @@
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-intro" style="background-image: url(images/3.jpg);">
-			<div class="overlay"></div>
+		<section class="ftco-section ftco-intro" style="background-image: url(images/pic3.png);background-attachment: fixed;">
+		
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-md-6 heading-section heading-section-white ftco-animate">
-            <h2 class="mb-3">Especializados en el transporte de personas con mobilidad reducida.</h2>
-            <a href="#" class="btn btn-primary btn-lg">Become A Driver</a>
+            <h2 class="mb-lg-4">Especializados en el transporte de personas con movilidad reducida.</h2>
+            <a href="#servicios" class="btn btn-primary btn-lg">Solicita tu servicio ahora</a>
           </div>
 				</div>
 			</div>
 		</section>
-
-
     <section class="ftco-section testimony-section bg-light" id="clientes">
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -438,37 +458,66 @@
         </div>
     	</div>
     </section>	-->
-    <section class="ftco-section ftco-about" id="contacto">
+
+		<section class="ftco-section ">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <span class="subheading">CONOCE NUESTRA</span>
+          <h2 class="mb-3">Ubicación</h2>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7595488732322!2d-75.60428678523114!3d6.162948495538029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683347f290211%3A0x313b358cea5661a9!2sCentro%20Empresarial%20S48%20Tower!5e0!3m2!1ses-419!2sco!4v1684174649208!5m2!1ses-419!2sco" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe></section>
+<br>
+    <section class="ftco-section ftco-about" id="contacto" style="background-image: url(images/pic4.png);  background-attachment: fixed;"> 
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/3.jpg);">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/pic2.png);">
 					</div>
 					<div class="col-md-6 wrap-about ftco-animate">
 	          <div class="heading-section heading-section-white pl-md-5">
 	          	<span class="subheading"></span>
 	            <h2 class="mb-4">Contacto</h2>
-
-	            <form>
+<!--Iniacia el formulario de contacto-->
+	            <form id="contactoForm">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nombre completo</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="Auto confiable S.A.S"  required="true">
+                  <label for="exampleInputEmail1" class="text-white">Nombre completo</label>
+                  <input class="form-control form-control-sm" type="text" name="name" placeholder="Autoconfiable S.A.S"  required="true">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Teléfono</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="301 137 3660" required="true"> 
+                  <label for="exampleInputPassword1" class="text-white">Teléfono</label>
+                  <input class="form-control form-control-sm" type="text" name="phone" placeholder="301 137 3660" required="true"> 
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Correo electrónico</label>
-                  <input class="form-control form-control-sm" type="email" placeholder="info@autoconfiable.com" required="true"> 
+                  <label for="exampleInputPassword1" class="text-white">Correo electrónico</label>
+                  <input class="form-control form-control-sm" type="email" name="email" placeholder="info@autoconfiable.com" required="true"> 
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Mensaje</label>
-                  <textarea class="form-control" rows="5" type="text" placeholder="Escribe tu mensaje aquí" required="true"> </textarea>
+                  <label class="text-white">Tipo de solicitud</label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="tipoSolicitud" required>
+                     <option value="">Seleccionar</option>
+                    <option value="Pregunta">Pregunta</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Solicitud">Solicitud</option>
+                    <option value="Información">Información</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="text-white">Mensaje</label>
+                  <textarea class="form-control" rows="5" type="text" name="mensaje" placeholder="Escribe tu mensaje aquí" required="true"> </textarea>
                 </div>
             
-                <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar mensaje</button>
-                <button type="reset" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                <input type="submit" value="Enviar mensaje" id="enviarCorreo" class="btn btn-success py-3 px-4">
+                <input type="reset" value="Cancelar" class="btn btn-danger py-3 px-4">
               </form>
+              <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('G8QIRpZvQ8B1zK40f')
+</script>
+<!--Finaliza el formulario de contacto-->
 	          </div>
 					</div>
 				</div>
@@ -480,7 +529,7 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2"><img src="images/logoBlanco.png" alt="logo" width="170px"> <a href="#" class="logo">Auto<span>confiable</span></a></h2>
+              <h2 class="ftco-heading-2"><img src="images/logoBlanco.png" alt="logo" width="170px"> <a href="#footer" class="logo" id="footer">Auto<span>confiable S.A.S</span></a></h2>
             
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-whatsapp"></span></a></li>
@@ -500,10 +549,10 @@
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Customer Support</h2>
+              <h2 class="ftco-heading-2">Contacto o solicitudes</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">PQRS</a></li>
-                <li><a href="#" class="py-2 d-block">Contacto</a></li>
+                <li><a href="#contacto" class="py-2 d-block">PQRS</a></li>
+                <li><a href="#contacto" class="py-2 d-block">Contacto</a></li>
               </ul>
             </div>
           </div>
@@ -512,8 +561,9 @@
             	<h2 class="ftco-heading-2">¿Alguna pregunta?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Calle 49 Sur # 45A-300</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Edificio Empresarial S48 Oficina 2108 Envigado <br>Calle 49 Sur # 45A-300</span></li>
 	                <li><a href="tel:3011373660"><span class="icon icon-phone"></span><span class="text">301 137 3660</span></a></li>
+                  <li><a href="tel:6044238422"><span class="icon icon-phone"></span><span class="text">604 423 8422</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@autoconfiable.com</span></a></li>
 	              </ul>
 	            </div>
@@ -524,8 +574,8 @@
           <div class="col-md-12 text-center">
 
             <p>
-              &copy; Copyright <?php echo date("Y");?>
-              <a class="text-light" href="https://agenciaeaglesoftware.com/">Agencia de Desarrollo Eagle Software</a>
+              &copy; Copyright <?php echo date("Y");?> Autoconfiable S.A.S<br>
+              <a class="text-light" href="https://agenciaeaglesoftware.com/">Made by Agencia de Desarrollo Eagle Software</a>
              </div>
         </div>
       </div>
@@ -555,6 +605,7 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="https://kit.fontawesome.com/d78c995630.js" crossorigin="anonymous"></script>
-    
+  <script src="js/formServices.js"></script>
+  <script src="js/formContact.js"></script>
   </body>
 </html>
