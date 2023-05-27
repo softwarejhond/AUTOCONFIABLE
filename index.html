@@ -41,7 +41,7 @@
 	          <li class="nav-item active"><a href="#nosotros" class="nav-link">Nosotros</a></li>
 	          <li class="nav-item active"><a href="#services" class="nav-link">Servicios</a></li>
 	          <li class="nav-item active"><a href="#clientes" class="nav-link">Aliados</a></li>
-	          <li class="nav-item active"><a href="#contacto" class="nav-link">Contacto</a></li>
+	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contacto</a></li>
             <li class="nav-item active"><a href="https://host33.latinoamericahosting.com:2096/logout/?locale=es_es" class="nav-link" target="_blank"><i class="bi bi-envelope-at-fill"></i></a></li>
 	        </ul>
 	      </div>
@@ -73,7 +73,7 @@
     				<div class="row no-gutters" >
 	  					<div class="col-md-4 d-flex align-items-center" >
                 <!--INICIA FORMULARIO DE SOLICITUD DE SERVICIO-->
-	  						<form action="#" class="request-form ftco-animate " id="servicios" style="background-color: rgb(0, 0, 255);">
+	  						<form class="request-form ftco-animate " id="servicios" style="background-color: rgb(0, 0, 255);">
 		          		<h2 class="text-center">Solicita tu servicio</h2>
 			    				<div class="form-group">
 			    					<label for="" class="label">Dirección</label>
@@ -113,13 +113,15 @@
                     </select>
                   </div>
 			            <div class="form-group">
-			              <input type="submit" value="Solicitar servicio" name="enviar" id="enviar" class="btn btn-success py-3 px-4">
+			              <input type="submit" value="Solicitar servicio" id="enviar" class="btn btn-success py-3 px-4">
 			            </div>
 			    			</form>
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-                <script type="text/javascript">
+                <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      
+              <script type="text/javascript">
                 emailjs.init('tI3ZdsNlFicK9UKRT')
-                </script>
+              </script>
                  <!--FINALIZA FORMULARIO DE SOLICITUD DE SERVICIO-->
 	  					</div>
 	  					<div class="col-md-8 d-flex align-items-center">
@@ -477,62 +479,7 @@
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7595488732322!2d-75.60428678523114!3d6.162948495538029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683347f290211%3A0x313b358cea5661a9!2sCentro%20Empresarial%20S48%20Tower!5e0!3m2!1ses-419!2sco!4v1684174649208!5m2!1ses-419!2sco" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe></section>
-<br>
-    <section class="ftco-section ftco-about" id="contacto" style="background-image: url(images/pic4.png);  background-attachment: fixed;"> 
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/pic2.png);">
-					</div>
-					<div class="col-md-6 wrap-about ftco-animate">
-	          <div class="heading-section heading-section-white pl-md-5">
-	          	<span class="subheading"></span>
-	            <h2 class="mb-4">Contacto</h2>
-<!--Iniacia el formulario de contacto-->
-	            <form id="contactoForm">
-                <div class="form-group">
-                  <label for="exampleInputEmail1" class="text-white">Nombre completo</label>
-                  <input class="form-control form-control-sm" type="text" name="name" placeholder="Autoconfiable S.A.S"  required="true">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1" class="text-white">Teléfono</label>
-                  <input class="form-control form-control-sm" type="text" name="phone" placeholder="301 137 3660" required="true"> 
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1" class="text-white">Correo electrónico</label>
-                  <input class="form-control form-control-sm" type="email" name="email" placeholder="info@autoconfiable.com" required="true"> 
-                </div>
-                <div class="form-group">
-                  <label class="text-white">Tipo de solicitud</label>
-                  <select class="form-control" id="exampleFormControlSelect1" name="tipoSolicitud" required>
-                     <option value="">Seleccionar</option>
-                    <option value="Pregunta">Pregunta</option>
-                    <option value="Queja">Queja</option>
-                    <option value="Reclamo">Reclamo</option>
-                    <option value="Solicitud">Solicitud</option>
-                    <option value="Información">Información</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1" class="text-white">Mensaje</label>
-                  <textarea class="form-control" rows="5" type="text" name="mensaje" placeholder="Escribe tu mensaje aquí" required="true"> </textarea>
-                </div>
-            
-                <input type="submit" value="Enviar mensaje" id="enviarCorreo" class="btn btn-success py-3 px-4">
-                <input type="reset" value="Cancelar" class="btn btn-danger py-3 px-4">
-              </form>
-              <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  emailjs.init('G8QIRpZvQ8B1zK40f')
-</script>
-<!--Finaliza el formulario de contacto-->
-	          </div>
-					</div>
-				</div>
-			</div>
-		</section>
-    <br>
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -614,7 +561,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="https://kit.fontawesome.com/d78c995630.js" crossorigin="anonymous"></script>
-  <script src="js/formServices.js"></script>
-  <script src="js/formContact.js"></script>
+  <script src="js/formServices.js?v=0.0.4"></script>
   </body>
 </html>

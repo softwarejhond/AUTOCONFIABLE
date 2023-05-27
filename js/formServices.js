@@ -1,20 +1,20 @@
-const btn = document.getElementById('enviar');
+const btnServices = document.getElementById('enviar');
 
 document.getElementById('servicios')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Enviando...';
-
+   btnServices.value = 'Enviando...';
+ 
    const serviceID = 'default_service';
-   const templateID = 'template_nd71yok';
+   const templateID = 'template_ve8ronq';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Solicitar servicio';
-      alert('Solicitud de servicio enviada!');
+      btnServices.value = 'Solicitar servicio';
+      alert('Servicio solicitado con éxito!');
     }, (err) => {
-      btn.value = 'Solicitar servicio';
+      btnServices.value = 'Solicitar servicio';
       alert(JSON.stringify(err));
     });
 });
